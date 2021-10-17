@@ -9,11 +9,13 @@ class Header extends Component {
     return (
         <header className={styles.header}>
 
+            {/* bloco do logo que via para home */}
             <button className={styles.Button}>
               <h1>
                 Gamer$
               </h1>
             </button>
+            {/* fim do bloco que via para home */}
               
 
             {/* bloco da pesquisa */}
@@ -30,28 +32,35 @@ class Header extends Component {
             {/* fim do bloco da pesquisa */}
 
 
-            <button className={styles.Button}>
-              <div className={styles.carrinho}>
-                  <FontAwesomeIcon icon={faUser} size='2x' color='#fff'/>
-              </div>
-            </button>
+            <div className={styles.opcoes}>
 
+              <button className={styles.Button}>
+                <div className={styles.buttonChoice}>
+                    <FontAwesomeIcon icon={faUser} size='2x' color='#fff'/>
+                </div>
+                <p>Usuário</p>
+              </button>
 
-            <button className={styles.Button}>
-              <div className={styles.carrinho}>
-                  <FontAwesomeIcon icon={faShoppingBag} size='2x' color='#fff'/>
-              </div>
-            </button>
+              <button className={styles.Button}>
+                <div className={styles.buttonChoice}>
+                    <FontAwesomeIcon icon={faShoppingBag} size='2x' color='#fff'/>
+                </div>
+                <p>Produtos</p>
+              </button>
 
+              <button className={styles.Button}>
+                <div className={styles.buttonChoice}>
+                    <FontAwesomeIcon icon={faGamepad} size='2x' color='#fff'/>
+                </div>
+                <p>Área Gamer</p>
+              </button>
 
-            <button className={styles.Button}>
-              <div className={styles.carrinho}>
-                  <FontAwesomeIcon icon={faGamepad} size='2x' color='#fff'/>
-              </div>
-            </button>
+            </div>
             
             
+            
             <button className={styles.Button}>
+              <p>0</p>
               <div className={styles.carrinho}>
                   <FontAwesomeIcon icon={faShoppingCart} size='2x' color='#fff'/>
               </div>

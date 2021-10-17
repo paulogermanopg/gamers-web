@@ -7,6 +7,13 @@
     color: #fff;
 }
 
+.header button p {
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+    font-weight: 500;
+}
+
 .header button h1 {
     font-family: 'Concert One', cursive;
     font-size: 35px;
@@ -15,6 +22,8 @@
 }
 
 .Button {
+    display: flex;
+    flex-direction: row;
     margin-left: 15px;
     padding: 0;
     background: none;
@@ -31,7 +40,7 @@
 }
 
 .header input {
-    width: 50%;
+    width: 100%;
     border-radius: 10px 0 0px 0;
     height: 7vh;
     outline: none;
@@ -47,6 +56,7 @@
     height: 7vh;
     border-radius: 0px 0 10px 0;
     padding: 5px;
+    padding-right: 10px;
     border: none;
     cursor: pointer;
 }
@@ -54,4 +64,31 @@
 .carrinho {
     align-self: center;
     margin-right: 15px;
+    padding: 10px;
+    transition: all .4s ;
+}
+
+.carrinho:hover {
+    background-color: rgba(255,255,255,0.35);
+    border-radius: 7px;
+}
+
+.opcoes {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    margin-right: 15vh;
+}
+
+.buttonChoice {
+    margin-right: 5px;
+    padding: 10px;
+    transition: all .4s ;
+}
+
+.buttonChoice:hover {
+    background-color: rgba(255,255,255,0.35);
+    border-radius: 7px;
 }
