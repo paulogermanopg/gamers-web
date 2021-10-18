@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from '../../styles/Header.module.css'
+import Link from 'next/link'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faSearch, faShoppingBag, faGamepad, faUser } from '@fortawesome/free-solid-svg-icons'
@@ -9,11 +10,14 @@ class Header extends Component {
     return (
         <header className={styles.header}>
 
+          <span className={styles.mobileContainer}>
             {/* bloco do logo que via para home */}
             <button className={styles.Button}>
-              <h1>
-                Gamer$
-              </h1>
+              <Link href='/'>
+                <h1>
+                  Gamer$
+                </h1>
+              </Link>
             </button>
             {/* fim do bloco que via para home */}
               
@@ -21,7 +25,7 @@ class Header extends Component {
             {/* bloco da pesquisa */}
             <div className={styles.containerSearch}>
 
-              <input 
+              <input className={styles.input}
                 type='text' placeholder='Qual jogo está procurando?'/>
 
               <button className={styles.searching}>   
@@ -32,41 +36,66 @@ class Header extends Component {
             {/* fim do bloco da pesquisa */}
 
 
+            {/* botões do cabeçalho */}
             <div className={styles.opcoes}>
 
-              <button className={styles.Button}>
-                <div className={styles.buttonChoice}>
-                    <FontAwesomeIcon icon={faUser} size='2x' color='#fff'/>
-                </div>
-                <p>Usuário</p>
-              </button>
+              <Link href='/'>
+                <button className={styles.Button}>
+                    <div className={styles.buttonChoice}>
+                      <FontAwesomeIcon icon={faUser} size='2x' color='#fff'/>
+                    </div>
+                    <p>Usuário</p>
+                </button>
+              </Link> 
 
-              <button className={styles.Button}>
-                <div className={styles.buttonChoice}>
-                    <FontAwesomeIcon icon={faShoppingBag} size='2x' color='#fff'/>
-                </div>
-                <p>Produtos</p>
-              </button>
+              <Link href='/Produtos'>
+                <button className={styles.Button}>
+                  <div className={styles.buttonChoice}>
+                      <FontAwesomeIcon icon={faShoppingBag} size='2x' color='#fff'/>
+                  </div>
+                  <p>Produtos</p>
+                </button>
+              </Link>
 
-              <button className={styles.Button}>
-                <div className={styles.buttonChoice}>
-                    <FontAwesomeIcon icon={faGamepad} size='2x' color='#fff'/>
-                </div>
-                <p>Área Gamer</p>
-              </button>
+              <Link href='/AreaGamer'>
+                <button className={styles.Button}>
+                  <div className={styles.buttonChoice}>
+                      <FontAwesomeIcon icon={faGamepad} size='2x' color='#fff'/>
+                  </div>
+                  <p>Gamer</p>
+                </button>
+              </Link>
 
             </div>
+            {/* fim dos botões do cabeçalho */}
             
             
-            
-            <button className={styles.Button}>
-              <p>0</p>
-              <div className={styles.carrinho}>
-                  <FontAwesomeIcon icon={faShoppingCart} size='2x' color='#fff'/>
-              </div>
+            {/* carrinho de compras */}
+            <Link href='/Carrinho'>
+              <button className={styles.Button}>
+                <p>0</p>
+                <div className={styles.carrinho}>
+                    <FontAwesomeIcon icon={faShoppingCart} size='2x' color='#fff'/>
+                </div>
+              </button>
+            </Link>
+            {/* fim do carrinho de compras */}
+          </span>
+          
+
+          {/* bloco da pesquisa Para dispositivos móveis */}
+          <div className={styles.containerSearchMobile}>
+
+            <input className={styles.input}
+              type='text' placeholder='Qual jogo está procurando?'/>
+
+            <button className={styles.searching}>   
+              <FontAwesomeIcon icon={faSearch} size='2x' color='#222' />
             </button>
             
-            
+          </div>
+          {/* fim do bloco da pesquisa */}
+                 
         </header>
     )
   }
