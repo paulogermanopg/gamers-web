@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
+import Header from '../components/common/Header'
 
 class Carrinho extends Component {
   render() {
     return (
-      <h1>Carrinho</h1>
+      <div>
+        <Header />
+        <h1>Carrinho</h1>
+      </div>
     )
   }
 }
