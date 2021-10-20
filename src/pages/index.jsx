@@ -1,19 +1,14 @@
 import React, { Component } from 'react'
-import Header from '../components/common/Header'
+
 import Link from 'next/link'
-import Footer from '../components/common/Footer'
+import Layout from '../components/common/Layout'
 
 class Home extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <h3>Olá</h3>
-        <Link href='/Produtos'>
-          Produtos
-        </Link>
-        <Footer />
-      </div>
+      <Layout>
+        <h3>Home</h3>
+      </Layout>
       
     )
   }

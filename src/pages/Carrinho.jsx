@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-import Header from '../components/common/Header'
+import Layout from '../components/common/Layout'
 
 class Carrinho extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <h1>Carrinho</h1>
-      </div>
+      <Layout>
+        <h3>Carrinho</h3>
+      </Layout>
     )
   }
 }

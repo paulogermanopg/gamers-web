@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-import Header from '../components/common/Header'
+import Layout from '../components/common/Layout'
 
 class Produtos extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <h1>Produtos</h1>
-      </div>
+      <Layout>
+        <h3>Produtos</h3>
+      </Layout>
     )
   }
 }
