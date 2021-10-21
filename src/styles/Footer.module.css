@@ -2,13 +2,13 @@
 
 .footer {
     display: flex;
+    position: absolute;
     flex: 1;
     align-items: center;
     background-color: #333333;
     color: #fff;
-    width: 100vmax;
+    width: 100%;
     bottom: 0;
-    position: absolute;
 }
 
 .footer a {
@@ -40,6 +40,9 @@
 }
 
 @media(max-width: 800px) {
+    .footer {
+        width: 100vmax;
+    }
     .center {
         display: none;
     }

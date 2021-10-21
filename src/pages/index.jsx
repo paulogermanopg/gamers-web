@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-
-import Link from 'next/link'
 import Layout from '../components/common/Layout'
+import Carousel from '../components/home/Carousel'
 
 class Home extends Component {
   render() {
     return (
       <Layout>
-        <h3>Home</h3>
+        <Carousel />
       </Layout>
-      
     )
   }
 }
