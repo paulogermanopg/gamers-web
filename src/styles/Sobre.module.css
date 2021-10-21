@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=PT+Sans:wght@400;700&display=swap');
+
+.containerSobre {
+    flex: 1;
+}
+
+.titulo {
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    background-color: #3c6090;
+    padding: 10px;
+    border-radius: 15px 0 15px 0;
+    margin-right: 15px;
+}
+
+.texto {
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    font-size: 14pt;
+    margin-left: 10px;
+    margin-right: 15px;
+    margin-bottom: 35px;
+}
+
+.blocos {
+    display: flex;
+    justify-content: center;
+}
+
+.esquerda {
+    display: flex;
+    background-color: #3c6090;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-right: 7px;
+    padding: 15px;
+    width: 42vh;
+    border-radius: 15px 0 0px 0;
+    justify-content: center;
+}
+
+.direita {
+    display: flex;
+    background-color: #3c6090;
+    margin-left: 7px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    padding: 15px;
+    width: 42vh;
+    border-radius: 0px 0 15px 0;
+    justify-content: center;
+}
+
+.textoBloco {
+    display: flex;
+    justify-content: center;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    font-size: 14pt;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: #557eb5;
+    padding: 15px;
+    width: 40vh;
+    border-radius: 15px;
+    line-height: 28px;
+}

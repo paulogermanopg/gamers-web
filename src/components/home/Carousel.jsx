@@ -41,6 +41,7 @@ class Carousel extends Component {
     render () {
         return (
             <div className={styles.carousel}>
+                
                 {
                     carouselArray.map((item,index)=> {
                         return (
@@ -50,14 +51,17 @@ class Carousel extends Component {
                         )
                     })
                 }
+
                 <button className={styles.esquerda}
                     onClick={this.esquerda}>
                     <FontAwesomeIcon icon={faChevronLeft} size='2x' color='#fff' />
                 </button>
+
                 <button className={styles.direita}
                     onClick={this.direita}>
                     <FontAwesomeIcon icon={faChevronRight} size='2x' color='#fff' />
                 </button>
+
             </div>
         )
     } 
