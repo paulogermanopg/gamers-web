@@ -54,3 +54,9 @@
         cursor: pointer;
     }
 }
+
+@media (max-width: 1024px) {
+    .carousel {
+        width: 95vmax;
+    }
+}

@@ -2,7 +2,7 @@
 
 .footer {
     display: flex;
-    position: absolute;
+    
     flex: 1;
     align-items: center;
     background-color: #333333;

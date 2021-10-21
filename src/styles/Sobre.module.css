@@ -67,3 +67,25 @@
     border-radius: 15px;
     line-height: 28px;
 }
+
+@media (max-width: 1024px) {
+    .titulo {
+        border-radius: 0 0 0 0;
+        width: 100vmax;
+    }
+    .texto {
+        width: 97vmax;
+    }
+    .blocos {
+        width: 100vmax;
+    }
+    .esquerda {
+        width: 50vmax;
+    }
+    .direita {
+        width: 50vmax;
+    }
+    .textoBloco {
+        width: 45vmax;
+    }
+  }
