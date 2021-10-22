@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=PT+Sans:wght@400;700&display=swap');
+
+.container {
+    display: flex;
+    flex: 1;
+    margin: 20px;
+    width: 20%;
+    border-style: solid;
+    border-radius: 15px 0 15px 0;
+    border-color: #3c6090;
+}
+
+.nome {
+    font-size: 12pt;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+}
+
+.preco {
+    font-size: 14pt;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: -5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.dividido {
+    font-size: 10pt;
+    font-family: 'PT Sans', sans-serif;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.img {
+    width: 70%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.spanImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
