@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearchDollar, faGamepad } from '@fortawesome/free-solid-svg-icons'
 
 class ProdutoContent extends Component {
-  
+
   render() {
     return (
       <div className={styles.container}>
@@ -13,19 +13,19 @@ class ProdutoContent extends Component {
         <div>
 
           <span className={styles.spanImg}>
-            <img src={'/static/images/jogos/horizon-zero-dawn.png'} alt="slide-img" className={styles.img}></img>
+            <img src={`/static/images/jogos/${this.props.image}`} alt="slide-img" className={styles.img}></img>
           </span>
           
           <p className={styles.nome}>
-            Horizon Zero Dawn
+            {this.props.name}
           </p>
 
           <p className={styles.preco}>
-            R$ 120,00
+            R$ {this.props.price}
           </p>
 
           <p className={styles.dividido}>
-            Dividido em até 8x de R$ 12,90 no cartão de crédito
+            Dividido em até 8x de R$ {parseFloat((this.props.price/8).toFixed(2))} no cartão de crédito
           </p>
 
         </div>

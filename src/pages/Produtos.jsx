@@ -1,12 +1,18 @@
 import React, { Component } from 'react'
 import Layout from '../components/common/Layout'
-import ProdutoContent from '../components/produtos/ProdutoContent'
+import ProdutosRender from '../components/produtos/ProdutosRender'
+import Categorias from '../components/produtos/Categorias'
+import styles from '../styles/Produtos.module.css'
 
 class Produtos extends Component {
+
   render() {
     return (
       <Layout>
-        <ProdutoContent />
+        <span className={styles.container}>
+          <Categorias />
+          <ProdutosRender />
+        </span>
       </Layout>
     )
   }

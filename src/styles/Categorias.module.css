@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=PT+Sans:wght@400;700&display=swap');
+
+.container {
+    flex: 1;
+    min-width: 15%;
+}
+
+.linha {
+    height: 3px;
+    border: none;
+    background-color: #3c6090;
+}
+
+.titulo {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13pt;
+    color: #fff;
+    text-align: left;
+    margin: 15px;
+}
+
+.escolhas {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 11pt;
+    color: #fff;
+    text-align: left;
+    margin: 15px;
+}
