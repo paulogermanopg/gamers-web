@@ -3,6 +3,7 @@ import Layout from '../../components/common/Layout'
 import data from '../products.json'
 import BlocoJogo from '../../components/produtos/BlocoJogo'
 import BlocoCompra from '../../components/produtos/BlocoCompra'
+import BlocoInformativo from '../../components/produtos/BlocoInformativo'
 import styles from '../../styles/JogoEscolhido.module.css'
 
 let jogos = data
@@ -19,6 +20,7 @@ function JogoEscolhido() {
 
     return (
       <Layout>
+
         <span className={styles.container}>
           <BlocoJogo 
             name={jogoEscolhido.name} descricao={jogoEscolhido.descricao}
@@ -26,7 +28,10 @@ function JogoEscolhido() {
 
           <BlocoCompra jogo={jogoEscolhido}/>
         </span>
-        
+
+        <div>
+          <BlocoInformativo jogo={ jogoEscolhido } />
+        </div>
 
       </Layout>
     )

@@ -70,3 +70,25 @@
     color: #fff;
     text-decoration: underline;
 }
+
+@media (max-width: 1224px) {
+    .descricao {
+        max-width: 70vh;  
+    }
+}
+
+@media (max-width: 1024px) {
+    .descricao {
+        max-width: 30vh;  
+    }
+}
+
+@media (max-width: 800px) {
+    .blocoJogo {
+        flex: 1;
+        min-width: 92vh;
+    }
+    .image {
+        height: 50%;
+    }
+}
