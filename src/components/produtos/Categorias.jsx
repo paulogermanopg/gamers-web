@@ -14,7 +14,7 @@ class Categoria extends Component {
 
         <p className={styles.titulo}>Categorias</p>
 
-        <hr className={styles.linha} />
+        <hr className={styles.linhaFina} />
 
         <p className={styles.escolhas}>RPG</p>
         <p className={styles.escolhas}>Aventura</p>
@@ -24,6 +24,8 @@ class Categoria extends Component {
         <hr className={styles.linha} />
 
         <p className={styles.titulo}>Filtrar</p>
+
+        <hr className={styles.linhaFina} />
 
         <p className={styles.escolhas}>Ordem Alfabética</p>
         <p className={styles.escolhas}>Maior Preço</p>

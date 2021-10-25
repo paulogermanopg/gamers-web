@@ -3,11 +3,18 @@
 .container {
     display: flex;
     margin: 20px;
-    width: 65%;
+    width: 80%;
     height: auto;
     border-style: solid;
     border-radius: 15px 0 15px 0;
     border-color: #3c6090;
+}
+
+.button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
 }
 
 .nome {

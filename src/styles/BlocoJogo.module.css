@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=PT+Sans:wght@400;700&display=swap');
+
+.container {
+    display: flex;
+}
+
+.blocoJogo {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 15px 0 15px 0;
+    border-color: #3c6090;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+.nome {
+    font-size: 14pt;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: left;
+}
+
+.acoes {
+    display: flex;
+    margin-top: 15px;
+}
+
+.acoes button {
+    margin-left: 5px;
+    margin-right: 5px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.descricao {
+    font-size: 12pt;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: left;
+    max-width: 100vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.buttonSaibaMais {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.saibaMais {
+    font-size: 12pt;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: left;
+    color: #fff;
+    text-decoration: underline;
+}

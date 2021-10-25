@@ -10,16 +10,25 @@ class ProdutosRender extends Component {
   state = {
     produtos: jogos,
   }
+
+  orderna = organizado => {
+    this.setState({ produtos: organizado })
+  }
+
   render() {
     return (
       <div className={styles.container}>
+
         <Grid container justify="center" spacing={1}>
+
             {this.state.produtos.map((jogo) => (
                 <Grid key={jogo.id} item xs={12} sm={6} md={4} lg={3}>
-                    <ProdutoContent name={jogo.name} price={jogo.price} image={jogo.image} />
+                    <ProdutoContent id={jogo.id} name={jogo.name} price={jogo.price} image={jogo.image} />
                 </Grid>
             ))}
+
         </Grid>
+
       </div>
     )
   }
