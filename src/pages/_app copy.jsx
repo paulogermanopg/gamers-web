@@ -6,11 +6,7 @@ import storeConfig from '../store/storeConfig';
 const store = storeConfig()
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider> 
-  )
+  return <Component {...pageProps} />
 }
 
 export default MyApp
