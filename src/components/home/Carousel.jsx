@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import styles from '../../styles/Carousel.module.scss'
+import styles from '../../styles/home/Carousel.module.scss'
 import ImageComponent from './ImageComponent'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../../styles/Sobre.module.css'
+import styles from '../../styles/home/Sobre.module.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearchDollar, faGamepad } from '@fortawesome/free-solid-svg-icons'

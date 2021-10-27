@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../../styles/Header.module.css'
+import styles from '../../styles/common/Header.module.css'
 import Link from 'next/link'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

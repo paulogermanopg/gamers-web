@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../../styles/BlocoInformativo.module.css'
+import styles from '../../styles/produtos/BlocoInformativo.module.css'
 
 class BlocoCompra extends Component {
     render(){

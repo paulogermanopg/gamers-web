@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../../styles/ProdutosContent.module.css'
+import styles from '../../styles/produtos/ProdutosContent.module.css'
 import Link from 'next/link'
 
 class ProdutoContent extends Component {

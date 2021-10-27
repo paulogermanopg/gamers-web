@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ProdutoContent from './ProdutoContent'
 import data from '../../pages/products.json'
-import styles from '../../styles/ProdutosRender.module.css'
+import styles from '../../styles/produtos/ProdutosRender.module.css'
 import Grid from '@material-ui/core/Grid'
 
 let jogos = data

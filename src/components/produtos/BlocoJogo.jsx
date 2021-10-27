@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../../styles/BlocoJogo.module.css'
+import styles from '../../styles/produtos/BlocoJogo.module.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faHeart, faShareAlt } from '@fortawesome/free-solid-svg-icons'

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import data from '../../pages/products.json'
-import styles from '../../styles/Categorias.module.css'
+import styles from '../../styles/produtos/Categorias.module.css'
 
 let jogos = data
 

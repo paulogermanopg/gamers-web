@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../../styles/Footer.module.css'
+import styles from '../../styles/common/Footer.module.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShareAlt, faThumbsUp, faCamera, faPhone } from '@fortawesome/free-solid-svg-icons'
