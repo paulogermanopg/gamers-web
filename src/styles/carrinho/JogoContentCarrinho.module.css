@@ -4,11 +4,12 @@
     display: flex;
     justify-content: space-between;
     margin: 20px;
-    width: 90%;
+    min-width: 60vmax;
     height: auto;
 }
 
 .nome {
+    flex: 1;
     align-self: center;
     font-size: 12pt;
     margin-left: 5px;
@@ -18,9 +19,10 @@
 }
 
 .img {
-    width: 70%;
+    flex: 1;
+    max-width: 50%;
     height: auto;
-    margin-top: 15px;
+    margin: 15px;
 }
 
 .spanImg {

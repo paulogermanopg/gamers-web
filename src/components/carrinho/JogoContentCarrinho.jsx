@@ -9,8 +9,25 @@ class JogoContentCarrinho extends Component {
         quantidade: 1
     }
 
+    //Aumenta a quantidade do produto e quando menor que 1 ele exclui
     quantidade = qtd => {
-        this.setState({ quantidade: this.state.quantidade + qtd })
+
+        if ((this.state.quantidade + qtd) < 1){
+
+            this.props.onExcluir && this.props.onExcluir(this.props.jogo.id)
+
+        } else if ((this.state.quantidade + qtd) < this.state.quantidade){
+
+            this.setState({ quantidade: this.state.quantidade + qtd })
+            this.props.onAdicionar && this.props.onAdicionar(this.props.jogo.id,'-')
+            
+        } else {
+
+            this.setState({ quantidade: this.state.quantidade + qtd })
+            this.props.onAdicionar && this.props.onAdicionar(this.props.jogo.id,'+')
+            
+        }
+
     }
 
     render() {
@@ -50,11 +67,13 @@ class JogoContentCarrinho extends Component {
                 </span>
                 {/* fim do botão */}
 
+                {/* parte do preço */}
                 <p className={styles.preco}>
-                    R$ {this.props.jogo.price * this.state.quantidade}
+                    R$ {parseFloat((this.props.jogo.price * this.state.quantidade).toFixed(2))}
                 </p>
+                {/* fim */}
 
-      </div>
+            </div>
     )
   }
 }

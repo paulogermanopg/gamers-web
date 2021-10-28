@@ -1,14 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=PT+Sans:wght@400;700&display=swap');
 
-.titulo {
-    font-size: 26px;
-    font-family: 'PT Sans', sans-serif;
-    color: #fff;
-    font-weight: 700;
+.container {
+    margin-top: 10px;
+    min-width: 20%;
+    margin-bottom: 20px;
 }
 
 .bloco {
     border-style: solid;
     border-radius: 15px 0 15px 0;
     border-color: #3c6090;
+}
+
+.titulo {
+    font-size: 26px;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.spanPreco {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linha {
+    height: 1px;
+    border: none;
+    background-color: #3c6090;
+}
+
+.texto {
+    font-size: 12pt;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.total {
+    font-size: 14pt;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.dividido {
+    font-size: 10pt;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+    text-align: right;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.botao {
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3c6090;
+    border-radius: 0 0 10px 0px;
 }

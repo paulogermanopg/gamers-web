@@ -9,6 +9,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 class BlocoCompra extends Component {
     state = {
         carrinho: this.props.carrinho,
+        subTotal:  this.props.subTotal,
     }
 
     //Varifica toda vez que houver atualização no estado da aplicação
@@ -16,6 +17,7 @@ class BlocoCompra extends Component {
         if (prevProps != this.props) {
             this.setState({ 
                 carrinho: this.props.carrinho,
+                subTotal:  this.props.subTotal,
              })
         }
     }
@@ -24,13 +26,11 @@ class BlocoCompra extends Component {
     carrinho = async() => {
         let arrayCarrinho = this.state.carrinho
         arrayCarrinho.push(this.props.jogo)
-        await this.setState({ carrinho: arrayCarrinho })
+        await this.setState({ 
+            carrinho: arrayCarrinho,
+            subTotal: parseFloat((this.state.subTotal + this.props.jogo.price).toFixed(2))
+        })
         this.props.onAddCarrinho({ ...this.state  })
-        this.props.onCarrinho && this.props.onCarrinho()
-        
-        if (this.props.onCancel){
-            this.props.onCancel && this.props.onCancel()
-        }
     }
 
     render(){
@@ -59,6 +59,7 @@ class BlocoCompra extends Component {
 const mapStateToProps = ({ produtos }) => {
     return {
         carrinho: produtos.carrinho,
+        subTotal: produtos.subTotal,
     }
 }
 
