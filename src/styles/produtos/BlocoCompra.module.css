@@ -37,7 +37,19 @@
     margin-top: 45px;
 }
 
-.button p {
+.buttonDisabed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: none;
+    border-radius:  10px;
+    background-color: #a1a1a1;
+    margin-left: 20px;
+    margin-top: 45px;
+}
+
+.textButton {
     font-size: 16pt;
     font-family: 'PT Sans', sans-serif;
     text-align: center;

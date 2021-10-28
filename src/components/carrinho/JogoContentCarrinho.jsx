@@ -6,24 +6,35 @@ import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 
 class JogoContentCarrinho extends Component {
     state = {
-        quantidade: 1
+        quantidade: 1,
+        produtoRetirado: false,
     }
 
     //Aumenta a quantidade do produto e quando menor que 1 ele exclui
     quantidade = qtd => {
 
-        if ((this.state.quantidade + qtd) < 1){
-
-            this.props.onExcluir && this.props.onExcluir(this.props.jogo.id)
-
-        } else if ((this.state.quantidade + qtd) < this.state.quantidade){
-
-            this.setState({ quantidade: this.state.quantidade + qtd })
+        if ((this.state.quantidade + qtd) < this.state.quantidade){
+            
+            if ((this.state.quantidade + qtd) < 1){
+                this.setState({ 
+                    quantidade: 0,
+                    produtoRetirado: true 
+                })
+            } else {
+                this.setState({ 
+                    quantidade: this.state.quantidade + qtd,
+                    produtoRetirado: false
+                })
+            }
+            
             this.props.onAdicionar && this.props.onAdicionar(this.props.jogo.id,'-')
             
         } else {
 
-            this.setState({ quantidade: this.state.quantidade + qtd })
+            this.setState({ 
+                quantidade: this.state.quantidade + qtd,
+                produtoRetirado: false
+            })
             this.props.onAdicionar && this.props.onAdicionar(this.props.jogo.id,'+')
             
         }
@@ -36,10 +47,11 @@ class JogoContentCarrinho extends Component {
 
                 {/* Capa e nome do jogo */}
                 <span className={styles.spanImg}>
-                    <img src={`/static/images/jogos/${this.props.jogo.image}`} alt="slide-img" className={styles.img}></img>
+                    <img src={`/static/images/jogos/${this.props.jogo.image}`} alt="slide-img" 
+                        className={this.state.produtoRetirado ? styles.imgApagada : styles.img}></img>
                 </span>
 
-                <p className={styles.nome}>
+                <p className={this.state.produtoRetirado ? styles.nomeRiscado : styles.nome}>
                     {this.props.jogo.name}
                 </p>
                 {/* fim da capa e nome */}
@@ -47,8 +59,12 @@ class JogoContentCarrinho extends Component {
 
                 {/* Botão para mudar a quantidade do produto */}
                 <span className={styles.quantidade}>
-                    <button className={styles.button}
-                        onClick={() => this.quantidade(-1)}>
+                    <button 
+                        className={
+                            this.state.produtoRetirado ? styles.buttonDisabed : styles.button
+                        }
+                        onClick={() => this.quantidade(-1)}
+                        disabled={this.state.produtoRetirado}>
 
                         <FontAwesomeIcon icon={faMinus} size='lg' 
                             color='#fff'/>

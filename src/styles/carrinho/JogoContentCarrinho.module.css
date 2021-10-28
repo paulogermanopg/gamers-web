@@ -18,11 +18,30 @@
     text-align: left;
 }
 
+.nomeRiscado {
+    flex: 1;
+    align-self: center;
+    font-size: 12pt;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: left;
+    text-decoration: line-through;
+}
+
 .img {
     flex: 1;
     max-width: 50%;
     height: auto;
     margin: 15px;
+}
+
+.imgApagada {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    margin: 15px;
+    opacity: 0.5;
 }
 
 .spanImg {
@@ -42,6 +61,12 @@
 
 .button {
     cursor: pointer;
+    background: none;
+    border: none;
+    height: auto;
+}
+
+.buttonDisabed {
     background: none;
     border: none;
     height: auto;

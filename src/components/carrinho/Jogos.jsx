@@ -29,21 +29,8 @@ class Jogos extends Component {
     }
   }
 
-  // Exclui do carrinho quando preciona o botão menos e o valor é menor que 1
-  excluirDoCarrinho = async(id) => {
-    let array = []
-    array = this.state.carrinho.filter(obj => obj.id != id)
-    let produtoRetirado = this.state.carrinho.filter(obj => obj.id == id)
-    await this.setState({ 
-      carrinho: array,
-      subTotal: this.state.subTotal - produtoRetirado[0].price
-    })
-    this.props.onAddCarrinho({ ...this.state  })
-  }
-
   // Adiciona mais um produto semelhante ao subTotal
   adicionarProduto = async(id,indicador) => {
-    let array = this.state.carrinho.filter(obj => obj.id != id)
     let produtoAdicionado = this.state.carrinho.filter(obj => obj.id == id)
 
     if (indicador == '-'){
@@ -74,7 +61,7 @@ class Jogos extends Component {
           {this.state.carrinho.map((jogo) => (
          
             <JogoContentCarrinho id={jogo.id} jogo={jogo} 
-              onExcluir={this.excluirDoCarrinho} onAdicionar={this.adicionarProduto}/>
+              onAdicionar={this.adicionarProduto}/>
          
           ))}
           

@@ -32,8 +32,9 @@ class BlocoCompra extends Component {
         })
         this.props.onAddCarrinho({ ...this.state  })
     }
-
+    
     render(){
+        let produtoNoCarrinho = this.state.carrinho.filter(obj => obj.id == this.props.jogo.id).length > 0
         return (
             <div className={styles.container}>
                 <p className={styles.preco}>
@@ -42,13 +43,20 @@ class BlocoCompra extends Component {
                 <p className={styles.dividido}>
                     Dividido em até 8x de R$ {parseFloat((this.props.jogo.price/8).toFixed(2))} no cartão de crédito.
                 </p>
-                <button className={styles.button}
-                    onClick={this.carrinho}>
-                    <p>
-                        Comprar
+                <button 
+                    className={
+                        produtoNoCarrinho ? styles.buttonDisabed : styles.button
+                    }
+                    onClick={this.carrinho}
+                    disabled={produtoNoCarrinho}>
+                    
+                    <p className={styles.textButton}>
+                        {produtoNoCarrinho ? 'Já no Carrinho' : 'Comprar'}
                     </p>
+
                     <FontAwesomeIcon icon={faShoppingCart} size='lg' 
                         color='#fff'/>
+
                 </button>
             </div>
           )
