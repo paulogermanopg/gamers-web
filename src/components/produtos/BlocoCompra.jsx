@@ -10,6 +10,9 @@ class BlocoCompra extends Component {
     state = {
         carrinho: this.props.carrinho,
         subTotal:  this.props.subTotal,
+        frete: this.props.frete,
+        total: this.props.total,
+        formaDePagamento: this.props.formaDePagamento,
     }
 
     //Varifica toda vez que houver atualização no estado da aplicação
@@ -18,6 +21,9 @@ class BlocoCompra extends Component {
             this.setState({ 
                 carrinho: this.props.carrinho,
                 subTotal:  this.props.subTotal,
+                frete: this.props.frete,
+                total: this.props.total,
+                formaDePagamento: this.props.formaDePagamento,
              })
         }
     }
@@ -26,9 +32,15 @@ class BlocoCompra extends Component {
     carrinho = async() => {
         let arrayCarrinho = this.state.carrinho
         arrayCarrinho.push(this.props.jogo)
+        let subtotal = parseFloat((this.state.subTotal + this.props.jogo.price).toFixed(2))
+        let frete = this.state.frete + 10
+        let total = subtotal + frete
+
         await this.setState({ 
             carrinho: arrayCarrinho,
-            subTotal: parseFloat((this.state.subTotal + this.props.jogo.price).toFixed(2))
+            subTotal: subtotal,
+            frete: frete,
+            total: total
         })
         this.props.onAddCarrinho({ ...this.state  })
     }
@@ -68,6 +80,9 @@ const mapStateToProps = ({ produtos }) => {
     return {
         carrinho: produtos.carrinho,
         subTotal: produtos.subTotal,
+        frete: produtos.frete,
+        total: produtos.total,
+        formaDePagamento: produtos.formaDePagamento,
     }
 }
 

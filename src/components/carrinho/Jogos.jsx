@@ -4,45 +4,55 @@ import { addCarrinho } from '../../store/actions/produtos'
 import JogoContentCarrinho from './JogoContentCarrinho'
 import styles from '../../styles/carrinho/Jogos.module.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGhost} from '@fortawesome/free-solid-svg-icons'
 
 class Jogos extends Component {
   state = {
     carrinho: this.props.carrinho,
     subTotal: this.props.subTotal,
+    frete: this.props.frete,
+    total: this.props.total,
+    formaDePagamento: this.props.formaDePagamento,
   }
 
   //Varifica toda vez que houver atualização no estado da aplicação
   componentDidUpdate = prevProps => {
     if (prevProps != this.props) {
    
-        if(this.props.carrinho.length == 0){
-        this.setState({ 
-            carrinho: this.props.carrinho,
-            subTotal: this.props.subTotal,
-            })
-        } else {
-        this.setState({ 
-            carrinho: this.props.carrinho,
-            subTotal: this.props.subTotal,
-            })
-        }
+      this.setState({ 
+        carrinho: this.props.carrinho,
+        subTotal: this.props.subTotal,
+        frete: this.props.frete,
+        total: this.props.total,
+        formaDePagamento: this.props.formaDePagamento,
+        })
+
     }
   }
 
   // Adiciona mais um produto semelhante ao subTotal
   adicionarProduto = async(id,indicador) => {
     let produtoAdicionado = this.state.carrinho.filter(obj => obj.id == id)
+    let subTotal = this.state.subTotal
+    let frete = this.state.frete
 
     if (indicador == '-'){
-
+      
       await this.setState({ 
-        subTotal: this.state.subTotal - parseFloat((produtoAdicionado[0].price).toFixed(2))
+        subTotal: subTotal - parseFloat((produtoAdicionado[0].price).toFixed(2)),
+        frete: frete - 10,
+        total: (subTotal - parseFloat((produtoAdicionado[0].price).toFixed(2))) + (frete - 10),
       })
+
     } else {
 
       await this.setState({ 
-        subTotal: this.state.subTotal + parseFloat((produtoAdicionado[0].price).toFixed(2))
+        subTotal: subTotal + parseFloat((produtoAdicionado[0].price).toFixed(2)),
+        frete: frete + 10,
+        total: (subTotal + parseFloat((produtoAdicionado[0].price).toFixed(2))) + (frete + 10),
       })
+
     }
     
     this.props.onAddCarrinho({ ...this.state  })
@@ -69,8 +79,15 @@ class Jogos extends Component {
 
         :
 
-        <p>Carrinho vazio</p>
+        <div className={styles.blocoVazio}>
 
+          <span className={styles.ghost}>
+            <FontAwesomeIcon icon={faGhost} size='10x' color='#fff' />
+          </span>
+
+        </div>
+      
+        
         }
         
       </div>
@@ -82,6 +99,9 @@ const mapStateToProps = ({ produtos }) => {
   return {
       carrinho: produtos.carrinho,
       subTotal: produtos.subTotal,
+      frete: produtos.frete,
+      total: produtos.total,
+      formaDePagamento: produtos.formaDePagamento,
   }
 }
 

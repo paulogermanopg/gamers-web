@@ -19,3 +19,31 @@
     border-radius: 15px 0 15px 0;
     border-color: #3c6090;
 }
+
+.blocoVazio {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.ghost {
+    opacity: 0.1;
+    position: absolute;
+}
+
+.vazio {
+    font-size: 24px;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+@media (max-width: 1124px) {
+    .container {
+        width: 100vmax;
+        margin-left: 0px;
+    }
+}
