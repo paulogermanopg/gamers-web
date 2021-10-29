@@ -4,6 +4,7 @@
     "name": "Call Of Duty I. Warfare",
     "price": 49.99,
     "score": 200,
+    "tag":"FPS",
     "image": "call-of-duty-infinite-warfare.png",
     "descricao": "Infinity Ward, o premiado estúdio que ajudou a criar a franquia Call of Duty, atinge um novo patamar com Call of Duty: Infinite Warfare: Infinite Warfare retorna às raízes da franquia com guerra em grande escala, batalhas épicas e narrativa militar cinematográfica imersiva, levando os jogadores a uma jornada além da nossa atmosfera. O game oferece opções para todos os fãs de Call of Duty com três modos de jogo exclusivos: Campanha, Multiplayer e Zumbis. Com uma narrativa rica e envolvente em um cenário diferente de tudo já visto em um jogo Call of Duty, o jogador embarcará em uma clássica história de guerra em grande escala, totalmente situada em um futuro onde o conflito humano se espalhou por nosso sistema solar. A ação Multiplayer combina o popular sistema de movimento em cadeia com inovações revolucionárias na jogabilidade para oferecer a experiência mais profunda e evolvente em Call of Duty até o momento. O título apresenta estonteantes ambientes interplanetários inéditos, novas armas e todas as habilidades para novos jogadores de Call of Duty. Além disso, a nova experiência em Zumbis vai cativar jogadores com uma direção original, proporcionando diversão e jogabilidade única, tudo isso em uma narrativa divertida que certamente empolgará os fãs."
   },
@@ -12,6 +13,7 @@
     "name": "The Witcher III Wild Hunt",
     "price": 119.5,
     "score": 500,
+    "tag":"RPG",
     "image": "the-witcher-iii-wild-hunt.png",
     "descricao": "Torne-se um caçador de monstros profissional e embarque em uma aventura de proporções épicas! Em seu lançamento, The Witcher 3: complete edition logo se tornou um clássico, recebendo mais de 250 prêmios de Jogo do Ano. Agora você pode aproveitar essa gigantesca aventura de mundo aberto, com mais de 100 horas, juntamente com suas duas expansões narrativas que garantem mais 50 horas de jogo. Essa edição inclui todos os conteúdos adicionais, novas armas, armaduras, trajes de companheiros, novo modo de jogo e missões secundárias."
   },
@@ -20,6 +22,7 @@
     "name": "Call Of Duty WWII",
     "price": 249.99,
     "score": 150,
+    "tag":"FPS",
     "image": "call-of-duty-wwii.png",
     "descricao": "Infinity Ward, o premiado estúdio que ajudou a criar a franquia Call of Duty, atinge um novo patamar com Call of Duty: Infinite Warfare: Infinite Warfare retorna às raízes da franquia com guerra em grande escala, batalhas épicas e narrativa militar cinematográfica imersiva, levando os jogadores a uma jornada além da nossa atmosfera. O game oferece opções para todos os fãs de Call of Duty com três modos de jogo exclusivos: Campanha, Multiplayer e Zumbis. Com uma narrativa rica e envolvente em um cenário diferente de tudo já visto em um jogo Call of Duty, o jogador embarcará em uma clássica história de guerra em grande escala, totalmente situada em um futuro onde o conflito humano se espalhou por nosso sistema solar. A ação Multiplayer combina o popular sistema de movimento em cadeia com inovações revolucionárias na jogabilidade para oferecer a experiência mais profunda e evolvente em Call of Duty até o momento. O título apresenta estonteantes ambientes interplanetários inéditos, novas armas e todas as habilidades para novos jogadores de Call of Duty. Além disso, a nova experiência em Zumbis vai cativar jogadores com uma direção original, proporcionando diversão e jogabilidade única, tudo isso em uma narrativa divertida que certamente empolgará os fãs."
   },
@@ -28,6 +31,7 @@
     "name": "Mortal Kombat XL",
     "price": 69.99,
     "score": 250,
+    "tag":"Aventura",
     "image": "mortal-kombat-xl.png",
     "descricao": "Komplete a experiência de Mortal Kombat X com conteúdos novos e já lançados. A versão inclui o jogo completo e os novos personagens controláveis: o Xenomorfo - de Alien, Leatherface, Triborg e Bo' Rai Cho. Os personagens controláveis já lançados anteriormente são o Predador, Jason Vorhees, Tremor, Tanya e Goro.A nova versão também conta com novos pacotes de skins, Medieval e Apocalíptico, além de um novo cenário, O Fosso."
   },
@@ -36,6 +40,7 @@
     "name": "Shards of Darkness",
     "price": 71.94,
     "score": 130,
+    "tag":"Aventura",
     "image": "shards-of-darkness.png",
     "descricao": "Após a queda da torre Akenash, Styx foi obrigado a se esconder para invadir Körangar, a cidade dos Dark Elves. Como se tudo isso fosse pouco, ele também descobre que elfos e anões uniram forças, colocando acima de qualquer coisa a única coisa que ambas as raças possuem em comum: o ódio por goblins.Para se safar dessa, cabe a você ajudar Styx a derrotar os oponentes usando as diversas habilidades que estarão a sua disposição."
   },
@@ -44,6 +49,7 @@
     "name": "Sombras de Mordor",
     "price": 79.99,
     "score": 400,
+    "tag":"RPG",
     "image": "terra-media-sombras-de-mordor.png",
     "descricao":"Você é Talion, um Cavaleiro do Portão Negro que está protegendo Mordor,há séculos pacífico. Em um piscar de olhos, você perde tudo: seus amigos, sua família e até mesmo a sua própria vida. Ressuscitado por um espírito vingativo, agora você deve embarcar em uma jornada contra aqueles que o maltrataram! Lute em Mordor e descubra a verdade sobre o espírito que lhe ajuda, descubra as origens dos Anéis do Poder, construa sua própria lenda e finalmente enfrente o mal de Sauron nessa nova narrativa da Terra-média."
   },
@@ -52,6 +58,7 @@
     "name": "FIFA 18",
     "price": 195.39,
     "score": 340,
+    "tag":"Esporte",
     "image": "fifa-18.png",
     "descricao":"A jogabilidade reimaginada cria avanços fundamentais que você vai sentir em todos os modos do FIFA 22. A recriação de goleiros e goleiras leva mais compostura e consistência à posição mais importante do campo.uma nova física da bola reimagina cada passe, finalização e gol e corridas explosivas fazem você sentir a aceleração dos jogadores e jogadoras de futebol com mais velocidade no jogo.Recriação de goleiros e goleiras: Um novo sistema para goleiros e goleiras oferece um novo nível de inteligência para a última linha de defesa."
   },
@@ -60,6 +67,7 @@
     "name": "Horizon Zero Dawn",
     "price": 115.8,
     "score": 500,
+    "tag":"Avenura",
     "image": "horizon-zero-dawn.png",
     "descricao":" Um exuberante mundo pós-apocalíptico: como as máquinas dominaram esse mundo e o que pretendem? O que aconteceu com a civilização que habitava esse lugar? Vasculhe cada canto de um reino repleto de relíquias antigas e construções misteriosas para desvendar o passado e desenterrar os vários segredos de uma terra esquecida. - Natureza e máquinas em conflito: Horizon Zero Dawn mistura dois elementos contrastantes, combinando um mundo vibrante repleto de belezas naturais e uma impressionante tecnologia avançada. Essa fusão cria uma combinação dinâmica de exploração e gameplay. - Desafie terríveis adversidades: o combate em Horizon Zero Dawn tem como base a velocidade e perspicácia de Aloy contra a força bruta e o tamanho das máquinas. Para vencer um inimigo muito maior e tecnologicamente superior, Aloy deve usar todo o seu conhecimento, além de sua inteligência e agilidade, para sobreviver a cada confronto. - Tecnologia revolucionária em mundo aberto: florestas com detalhes inacreditáveis, montanhas majestosas e ruínas cinematográficas de uma antiga civilização combinadas em uma paisagem cheia de vida com sistemas de mudança do tempo e ciclo completo de noite e dia."
   }

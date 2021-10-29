@@ -5,12 +5,6 @@
     min-width: 15%;
 }
 
-.linha {
-    height: 3px;
-    border: none;
-    background-color: #3c6090;
-}
-
 .linhaFina {
     height: 1px;
     border: none;
@@ -32,6 +26,12 @@
     color: #fff;
     text-align: left;
     margin: 15px;
+}
+
+.button {
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 @media (max-width: 800px) {

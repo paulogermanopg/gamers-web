@@ -1,13 +1,54 @@
 import React, { Component } from 'react'
-import data from '../../pages/products.json'
 import styles from '../../styles/produtos/Categorias.module.css'
 
-let jogos = data
-
 class Categoria extends Component {
-  state = {
-    produtos: jogos,
+
+  ordenar = tipo => {
+
+    switch (tipo){
+        case 'Alfabeto':
+            function alfabetica(a,b) {
+                if (a.name < b.name)
+                   return -1;
+                if (a.name > b.name)
+                  return 1;
+                return 0;
+              }
+            this.props.onOrdenar && this.props.onOrdenar(this.props.produtos.sort(alfabetica))
+            break
+        case 'Maior':
+            function maiorValor(a,b) {
+                if (a.price > b.price)
+                   return -1;
+                if (a.price < b.price)
+                  return 1;
+                return 0;
+              }
+            this.props.onOrdenar && this.props.onOrdenar(this.props.produtos.sort(maiorValor))
+            break
+        case 'Menor':
+            function menorValor(a,b) {
+                if (a.price < b.price)
+                   return -1;
+                if (a.price > b.price)
+                  return 1;
+                return 0;
+              }
+            this.props.onOrdenar && this.props.onOrdenar(this.props.produtos.sort(menorValor))
+            break
+        case 'Popular':
+            function popular(a,b) {
+                if (a.score > b.score)
+                   return -1;
+                if (a.score < b.score)
+                  return 1;
+                return 0;
+              }
+            this.props.onOrdenar && this.props.onOrdenar(this.props.produtos.sort(popular))
+            break
+      }
   }
+
   render() {
     return (
       <div className={styles.container}>
@@ -16,22 +57,26 @@ class Categoria extends Component {
 
         <hr className={styles.linhaFina} />
 
-        <p className={styles.escolhas}>RPG</p>
-        <p className={styles.escolhas}>Aventura</p>
-        <p className={styles.escolhas}>FPS</p>
-        <p className={styles.escolhas}>Esporte</p>
+        <button className={styles.button}
+          onClick={() => this.ordenar('Alfabeto')}>
+          <p className={styles.escolhas}>Ordem Alfabética</p>
+        </button>
 
-        <hr className={styles.linha} />
+        <button className={styles.button}
+          onClick={() => this.ordenar('Maior')}>
+          <p className={styles.escolhas}>Maior Preço</p>
+        </button>
 
-        <p className={styles.titulo}>Filtrar</p>
+        <button className={styles.button}
+          onClick={() => this.ordenar('Menor')}>
+          <p className={styles.escolhas}>Menor Preço</p>
+        </button>
 
-        <hr className={styles.linhaFina} />
-
-        <p className={styles.escolhas}>Ordem Alfabética</p>
-        <p className={styles.escolhas}>Maior Preço</p>
-        <p className={styles.escolhas}>Menor Preço</p>
-        <p className={styles.escolhas}>Populares</p>
-
+        <button className={styles.button}
+          onClick={() => this.ordenar('Popular')}>
+          <p className={styles.escolhas}>Populares</p>
+        </button>
+      
       </div>
     )
   }

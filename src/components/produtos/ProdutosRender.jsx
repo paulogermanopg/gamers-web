@@ -1,18 +1,11 @@
 import React, { Component } from 'react'
 import ProdutoContent from './ProdutoContent'
-import data from '../../pages/products.json'
 import styles from '../../styles/produtos/ProdutosRender.module.css'
 import Grid from '@material-ui/core/Grid'
 
-let jogos = data
-
 class ProdutosRender extends Component {
   state = {
-    produtos: jogos,
-  }
-
-  orderna = organizado => {
-    this.setState({ produtos: organizado })
+    produtos: this.props.produtos,
   }
 
   render() {
