@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import styles from '../../styles/common/Header.module.css'
 import Link from 'next/link'
 
@@ -6,6 +7,32 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faSearch, faShoppingBag, faGamepad, faUser } from '@fortawesome/free-solid-svg-icons'
 
 class Header extends Component {
+  state = {
+    carrinho: this.props.carrinho,
+    subTotal:  this.props.subTotal,
+    frete: this.props.frete,
+    total: this.props.total,
+    formaDePagamento: this.props.formaDePagamento,
+    busca: '',
+  }
+
+  //Varifica toda vez que houver atualização no estado da aplicação
+  componentDidUpdate = prevProps => {
+    if (prevProps != this.props) {
+        this.setState({ 
+            carrinho: this.props.carrinho,
+            subTotal:  this.props.subTotal,
+            frete: this.props.frete,
+            total: this.props.total,
+            formaDePagamento: this.props.formaDePagamento,
+         })
+    } 
+  }
+  
+  buscar = () => {
+    //Ainda a implementar
+  }
+
   render() {
     return (
         <header className={styles.header}>
@@ -26,9 +53,12 @@ class Header extends Component {
             <div className={styles.containerSearch}>
 
               <input className={styles.input}
-                type='text' placeholder='Qual jogo está procurando?'/>
+                type='text' placeholder='Qual jogo está procurando?'
+                value={this.state.busca}
+                onChange={e => this.setState({ busca: e.target.value })} />
 
-              <button className={styles.searching}>   
+              <button className={styles.searching}
+                onClick={this.buscar}>   
                 <FontAwesomeIcon icon={faSearch} size='2x' color='#222' />
               </button>
               
@@ -73,7 +103,7 @@ class Header extends Component {
             {/* carrinho de compras */}
             <Link href='/Carrinho'>
               <button className={styles.Button}>
-                <p>0</p>
+                <p>{this.state.carrinho.length}</p>
                 <div className={styles.carrinho}>
                     <FontAwesomeIcon icon={faShoppingCart} size='2x' color='#fff'/>
                 </div>
@@ -101,4 +131,14 @@ class Header extends Component {
   }
 }
 
-export default Header
+const mapStateToProps = ({ produtos }) => {
+  return {
+      carrinho: produtos.carrinho,
+      subTotal: produtos.subTotal,
+      frete: produtos.frete,
+      total: produtos.total,
+      formaDePagamento: produtos.formaDePagamento,
+  }
+}
+
+export default connect(mapStateToProps)(Header)
