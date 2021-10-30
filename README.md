@@ -1,8 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-commerce front-end GAMER$
 
-## Getting Started
+![Preview-Screens](https://github.com/paulogermanopg/gamers-web/blob/main/imagem.png)
 
-First, run the development server:
+## Sobre este projeto
+### obs: Toda e qualquer imagem utilizada neste projeto, mensão a quaisquer jogos, produtos e informações, são apenas utilizados para complementar. Não cabe a mim os direitos autoriais de tais produtos.
+Este projeto traz como principal ideia montar um front-end Web em ReactJS e NextJS para um E-commerce de jogos digitias. Contendo a leitura dinâmica dos produtos através de um arquivo .json.
+Tendo como página inicial um Carousel de imagem com Scroll automático, como também uma área de aresentação do aplicativo.
+
+O projeto tem como objetivo exemplificar componentes adaptáveis e uma estrutura de gerenciamento de estado com o Redux, para que seja possível a integração com o back-end de forma qu não precise uma alteração do front-end.
+Ele faz parte de meu portfólio pessoal, então sinta-se livre para dar seu feedback, criar seus forks e opinar; e se de algum modo este projeto foi importante para você eu já me sinto satisfeito.
+
+Meu LinkedIn, disponível em: [LinkedIn](https://www.linkedin.com/in/paulo-germano-pg/).
+
+## Instalação
+
+Este é um projeto [Next.js](https://nextjs.org/) criado através de [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Startando o projeto 
+(perdoem-me o neologismo) 
+
+Primeiramente, execute o servidor com:
 
 ```bash
 npm run dev
@@ -10,25 +27,30 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra em seu navegador [http://localhost:3000](http://localhost:3000) para ver o rultado da aplicação.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Clonando o repositório
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**Clone o repositório com:**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+$ git clone https://github.com/paulogermanopg/gamers-web.git
+$ cd gamers-web
+```
 
-## Learn More
+**Instale as dependências com:**
 
-To learn more about Next.js, take a look at the following resources:
+```
+$ yarn
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+_ou_
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+$ npm i
 
-## Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Licença
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE.md](https://github.com/paulogermanopg/gamers-web/blob/main/LICENSE) para obter detalhes.
